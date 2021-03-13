@@ -5,7 +5,7 @@ def development = [
 	"hostname": "<dev IP>", // <------------- past development ABAP system IP here
 	"port": "8000",
 	"client": "100",
-	"credentials": "gCTS_source",
+	"credentials": "<dev cred ID>", // <------------- past your Jenkins credentials ID for dev here
 	"repo_id": "<int repo name>" // <------------- past your gCST repository name here
     ]
 
@@ -13,7 +13,7 @@ def integrate = [
 	"hostname": "<int IP>", // <------------- past integration ABAP system IP here
 	"port": "8000",
 	"client": "500",
-	"credentials": "gCTS_target",
+	"credentials": "int cred ID", // <------------- past your Jenkins credentials ID for inr here
 	"repo_id": "<int repo name>" // <------------- past your gCST repository name here
 ]
 
