@@ -5,7 +5,7 @@ def integrate = [
 	"hostname": "<int IP>", // <------------- past integration ABAP system IP here
 	"port": "8000",
 	"client": "500",
-	"credentials": "int cred ID", // <------------- past your Jenkins credentials ID for inr here
+	"credentials": "<int cred ID>", // <------------- past your Jenkins credentials ID for inr here
 	"repo_id": "<int repo name>" // <------------- past your gCST repository name here
 ]
 
