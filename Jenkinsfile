@@ -1,14 +1,6 @@
 @Library('piper-lib-os') _
 @Library('ares-lib') __
 
-def development = [ 
-	"hostname": "<dev IP>", // <------------- past development ABAP system IP here
-	"port": "8000",
-	"client": "100",
-	"credentials": "<dev cred ID>", // <------------- past your Jenkins credentials ID for dev here
-	"repo_id": "<int repo name>" // <------------- past your gCST repository name here
-    ]
-
 def integrate = [ 
 	"hostname": "<int IP>", // <------------- past integration ABAP system IP here
 	"port": "8000",
@@ -16,7 +8,6 @@ def integrate = [
 	"credentials": "int cred ID", // <------------- past your Jenkins credentials ID for inr here
 	"repo_id": "<int repo name>" // <------------- past your gCST repository name here
 ]
-
 
 pipeline {
     agent any
@@ -30,7 +21,6 @@ pipeline {
         stage('Integrate') {
             steps {
                 script {
-                    development.pipelinename = "${env.JOB_BASE_NAME}_${env.BUILD_NUMBER}"
                     integrate.pipelinename = "${env.JOB_BASE_NAME}_${env.BUILD_NUMBER}"
                     integrate.commit_id = sh(returnStdout: true, script: 'git rev-parse HEAD')
                     echo 'integrate.commit_id is: '+integrate.commit_id
