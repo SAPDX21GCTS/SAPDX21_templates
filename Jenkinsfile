@@ -35,7 +35,7 @@ pipeline {
                         script: this,
                         host: 'http://<int IP>:8000', // <------------- past integration ABAP system IP here
                         client: '500',
-                        abapCredentialsId: 'gCTS_source',
+                        abapCredentialsId: 'gCTS_target',
                         repository: '<int repo name>' // <------------- past your gCST repository name here
                         )
                 } //script
