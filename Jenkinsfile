@@ -35,7 +35,7 @@ pipeline {
                         script: this,
                         host: 'http://<int IP>:8000', // <------------- past integration ABAP system IP here
                         client: '500',
-                        abapCredentialsId: 'gCTS_target',
+                        abapCredentialsId: '<int cred ID>', // <------------- past your Jenkins credentials ID for inr here
                         repository: '<int repo name>' // <------------- past your gCST repository name here
                         )
                 } //script
